@@ -51,10 +51,10 @@ const whatsappHref = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(
                 <Image
                     src={servicesDepilacion}
                     alt="Depilación láser profesional"
-                    width={960}
-                    height={720}
-                    sizes="(max-width: 1024px) 100vw, 50vw"
-                    quality={75}
+                    widths={[480, 800, 960]}
+                    sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 960px"
+                    quality={80} 
+                    format="webp" 
                     loading="eager"
                     fetchpriority="high"
                     class="absolute inset-0 h-full w-full object-cover transition duration-500 hover:scale-105"
