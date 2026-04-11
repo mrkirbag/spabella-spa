@@ -36,22 +36,4 @@ export const initServicesAnimations = () => {
             start: 'top 78%',
         },
     });
-
-    gsap.fromTo(
-        '[data-reveal-float]',
-        { y: 0 },
-        {
-            y: -12,
-            duration: 1.25,
-            repeat: -1,
-            yoyo: true,
-            ease: 'sine.inOut',
-            autoRound: false,
-            delay: 0.8,
-            stagger: {
-                each: 0.15,
-                from: 'start',
-            },
-        }
-    );
 };
