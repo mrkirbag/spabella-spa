@@ -1,0 +1,100 @@
+---
+import '@/styles/global.css';
+
+interface Props {
+	title: string;
+	description?: string;
+	image?: string;
+}
+const {
+	title,
+	description = 'Spabella Stetic ofrece tratamientos estéticos, cuidado facial, bienestar y experiencias personalizadas para realzar tu belleza con resultados visibles.',
+	image = '/logo.png'
+} = Astro.props;
+
+const siteUrl = 'https://spabellastetic.com';
+const canonical = new URL(Astro.url.pathname, siteUrl).toString();
+const seoImage = new URL(image, siteUrl).toString();
+const organizationJsonLd = {
+	'@context': 'https://schema.org',
+	'@type': 'BeautySalon',
+	name: 'Spabella Stetic',
+	url: siteUrl,
+	logo: `${siteUrl}/logo.png`,
+	image: seoImage,
+	telephone: '+584247394782',
+	address: {
+		'@type': 'PostalAddress',
+		addressLocality: 'San Cristobal',
+		addressCountry: 'VE'
+	},
+	openingHoursSpecification: [
+		{
+			'@type': 'OpeningHoursSpecification',
+			dayOfWeek: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday'],
+			opens: '09:00',
+			closes: '18:00'
+		},
+		{
+			'@type': 'OpeningHoursSpecification',
+			dayOfWeek: 'Saturday',
+			opens: '09:00',
+			closes: '18:00'
+		}
+		],
+	sameAs: [
+		'https://instagram.com/spabellastetic',
+		'https://facebook.com/spabellastetic'
+	]
+};
+---
+
+<!doctype html>
+<html lang="es" class="scroll-smooth">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width" />
+		<meta name="description" content={description} />
+		<meta name="robots" content="index, follow" />
+		<meta name="author" content="Spabella Stetic" />
+		<meta name="theme-color" content="#e2c278" />
+		<link rel="canonical" href={canonical} />
+		<link rel="icon" type="image/svg+xml" href="/logo.png" />
+
+		<meta property="og:type" content="website" />
+		<meta property="og:locale" content="es_ES" />
+		<meta property="og:site_name" content="Spabella Stetic" />
+		<meta property="og:title" content={title} />
+		<meta property="og:description" content={description} />
+		<meta property="og:url" content={canonical} />
+		<meta property="og:image" content={seoImage} />
+		<meta property="og:image:alt" content="Spabella Stetic" />
+
+		<meta name="twitter:card" content="summary_large_image" />
+		<meta name="twitter:title" content={title} />
+		<meta name="twitter:description" content={description} />
+		<meta name="twitter:image" content={seoImage} />
+		
+		<title>{title}</title>
+		<script type="application/ld+json" set:html={JSON.stringify(organizationJsonLd)}></script>
+	</head>
+
+	<body class="font-body text-on-surface selection:bg-primary-container marble-bg">
+		<slot />
+	</body>
+</html>
+
+<style is:global>
+	.marble-bg {
+		background-image: url('/bg.webp'); 
+		background-size: cover;
+		background-position: center;
+		background-attachment: fixed;
+	}
+	.golden-line {
+		height: 1px;
+		background: linear-gradient(90deg, transparent, #775a19, transparent);
+		width: 100%;
+		opacity: 0.3;
+	}
+</style>

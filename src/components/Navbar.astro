@@ -1,0 +1,77 @@
+---
+const whatsappNumber = '584247394782';
+const whatsappMessage = 'Hola, bienvenido a Spabella Stetic. Será un placer asesorarte y ayudarte a reservar tu experiencia. ¿Podrían brindarme información, por favor?';
+const whatsappHref = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(whatsappMessage)}`;
+---
+
+<nav
+    id="site-navbar"
+    class="fixed top-0 z-50 w-full border-b border-primary/10 bg-surface/90 backdrop-blur-lg transition-[background-color,border-color,box-shadow] duration-220"
+>
+    <div id="site-navbar-inner" class="mx-auto flex max-w-7xl items-center justify-between px-5 py-4 transition-[padding] duration-220 md:px-10 md:py-5">
+        <a href="#inicio" class="inline-flex shrink-0 items-center">
+            <img id="site-navbar-logo" src="/logo.png" alt="Spabella Stetic" class="h-auto w-10 object-contain transition-[transform,opacity] duration-220" />
+            <p id="site-navbar-brand-text" class="ml-2 font-bold text-on-surface-variant transition-[transform,opacity] duration-220">SPABELLA STETIC</p>
+        </a>
+        <div class="hidden md:flex items-center space-x-8 lg:space-x-12">
+            {[
+                { label: 'Inicio', href: '#inicio' },
+                { label: 'Servicios', href: '#servicios' },
+                { label: 'Contacto', href: '#contacto' }
+            ].map((item) => (
+                <a href={item.href} class="uppercase tracking-[0.18em] text-xs font-semibold text-on-surface-variant hover:text-primary transition-colors">
+                    {item.label}
+                </a>
+            ))}
+            <a
+                href={whatsappHref}
+                target="_blank"
+                rel="noreferrer"
+                class="touch-manipulation rounded-full bg-primary px-7 py-3 text-[10px] uppercase tracking-widest text-on-primary transition-[transform,background-color] duration-260 ease-[cubic-bezier(0.2,0.8,0.2,1)] will-change-transform hover:-translate-y-1 active:-translate-y-1 active:scale-[0.99] lg:px-10"
+            >
+                Reservar
+            </a>
+        </div>
+        <a
+            href={whatsappHref}
+            target="_blank"
+            rel="noreferrer"
+            class="font-detail touch-manipulation rounded-full bg-primary px-4 py-2 text-[10px] uppercase tracking-widest text-on-primary transition-[transform,background-color] duration-260 ease-[cubic-bezier(0.2,0.8,0.2,1)] will-change-transform hover:-translate-y-1 active:-translate-y-1 active:scale-[0.99] md:hidden"
+        >
+            Reservar
+        </a>
+    </div>
+</nav>
+
+<script>
+    const navbar = document.getElementById('site-navbar');
+    const navbarInner = document.getElementById('site-navbar-inner');
+    const navbarLogo = document.getElementById('site-navbar-logo');
+    const navbarBrandText = document.getElementById('site-navbar-brand-text');
+
+    const syncNavbarState = () => {
+        
+        if (!navbar || !navbarInner || !navbarLogo || !navbarBrandText) return;
+
+        const isScrolled = window.scrollY > 24;
+
+        navbar.classList.toggle('bg-surface/70', isScrolled);
+        navbar.classList.toggle('bg-surface/90', !isScrolled);
+        navbar.classList.toggle('border-primary/15', isScrolled);
+        navbar.classList.toggle('border-primary/10', !isScrolled);
+        navbar.classList.toggle('shadow-lg', isScrolled);
+        navbar.classList.toggle('shadow-primary/10', isScrolled);
+
+        navbarInner.classList.toggle('py-[0.65rem]', isScrolled);
+        navbarInner.classList.toggle('md:py-[0.7rem]', isScrolled);
+        navbarInner.classList.toggle('py-4', !isScrolled);
+        navbarInner.classList.toggle('md:py-5', !isScrolled);
+
+        navbarLogo.classList.toggle('scale-[0.88]', isScrolled);
+        navbarBrandText.classList.toggle('scale-[0.96]', isScrolled);
+        navbarBrandText.classList.toggle('opacity-[0.86]', isScrolled);
+    };
+
+    syncNavbarState();
+    window.addEventListener('scroll', syncNavbarState, { passive: true });
+</script>

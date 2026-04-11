@@ -1,0 +1,158 @@
+@import "tailwindcss";
+
+@theme {
+    --color-primary: #d4af37;
+    --color-primary-container: #f9f5eb;
+    --color-on-primary: #ffffff;
+
+    --color-surface: #ffffff;
+    --color-on-surface: #9a7b4f;
+    --color-on-surface-variant: #7f6843;
+
+    --color-outline: #e3d5ca;
+    --color-outline-variant: #efe5db;
+
+    --color-brand-white: #ffffff;
+    --color-brand-ivory: #f9f5eb;
+    --color-brand-champagne: #d4af37;
+    --color-brand-sand: #e3d5ca;
+    --color-brand-bronze: #9a7b4f;
+
+    --font-headline: "Noto Serif", serif;
+    --font-body: "Noto Sans", sans-serif;
+    --font-detail: "Lato", sans-serif;
+
+    --tracking-ultra: 0.4rem;
+}
+
+@font-face {
+    font-family: "Noto Serif";
+    src: url("/fonts/NotoSerif-Regular.woff2") format("woff2");
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Noto Serif";
+    src: url("/fonts/NotoSerif-Italic.woff2") format("woff2");
+    font-weight: 400;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Noto Sans";
+    src: url("/fonts/NotoSans-Regular.woff2") format("woff2");
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Noto Sans";
+    src: url("/fonts/NotoSans-Italic.woff2") format("woff2");
+    font-weight: 400;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Lato";
+    src: url("/fonts/Lato-Light.woff2") format("woff2");
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Lato";
+    src: url("/fonts/Lato-Regular.woff2") format("woff2");
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Lato";
+    src: url("/fonts/Lato-Bold.woff2") format("woff2");
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Lato";
+    src: url("/fonts/Lato-Black.woff2") format("woff2");
+    font-weight: 900;
+    font-style: normal;
+    font-display: swap;
+}
+
+@utility marble-bg {
+    background-image: radial-gradient(circle at 10% 15%, rgba(212, 175, 55, 0.1), transparent 45%), linear-gradient(180deg, #ffffff 0%, #f9f5eb 100%);
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+@utility golden-line {
+    height: 1px;
+    background: linear-gradient(90deg, transparent, var(--color-primary), transparent);
+    width: 100%;
+    opacity: 0.3;
+}
+
+@utility editorial-overlap {
+    margin-top: -5rem;
+    position: relative;
+    z-index: 10;
+}
+
+:root {
+    color-scheme: light;
+    --brand-white: #ffffff;
+    --brand-ivory: #f9f5eb;
+    --brand-champagne: #d4af37;
+    --brand-sand: #e3d5ca;
+    --brand-bronze: #9a7b4f;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    min-height: 100%;
+}
+
+body {
+    font-family: var(--font-body);
+    color: var(--color-on-surface);
+    background-color: var(--color-surface);
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: var(--font-headline);
+    color: var(--color-on-surface);
+}
+
+.font-detail {
+    font-family: var(--font-detail);
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}

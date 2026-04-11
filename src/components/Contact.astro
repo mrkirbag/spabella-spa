@@ -1,0 +1,199 @@
+---
+const whatsappNumber = '584247394782';
+const whatsappMessage = 'Hola, bienvenido a Spabella Stetic. Será un placer asesorarte y ayudarte a reservar tu experiencia. ¿Podrían brindarme información, por favor?';
+const whatsappHref = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(whatsappMessage)}`;
+const instagramHref = 'https://instagram.com/spabellastetic';
+const mapsHref = 'https://maps.app.goo.gl/j5AbFkgEJDm2AU3bA';
+const locationLabel = 'CC Plaza, Barrio Obrero, San Cristóbal, Venezuela';
+---
+
+<section
+    id="contacto"
+    data-animate-section="contact"
+    class="grid min-h-svh items-center bg-surface/30 px-[clamp(1.2rem,3.2vw,3rem)] pt-[clamp(4.8rem,8vw,6rem)] pb-[clamp(2rem,4vw,3rem)]"
+>
+    <div class="mx-auto grid w-full max-w-295 grid-cols-1 items-start gap-[clamp(1rem,3vw,2.3rem)] lg:grid-cols-2">
+
+        <div class="flex h-full flex-col rounded-[20px] border border-primary/15 bg-surface/90 p-[clamp(0.95rem,2.2vw,1.5rem)]" data-contact-panel>
+
+            <h2 class="font-headline m-0 mb-2 text-4xl leading-[1.08] text-on-surface">Reserva Tu Cita</h2>
+
+            <form class="flex grow flex-col gap-2.5" aria-label="Formulario de cita" id="contact-whatsapp-form">
+                <div class="grid grow content-center gap-2.5">
+                    <label class="grid gap-1 text-[0.62rem] font-bold uppercase tracking-[0.14em] text-primary">
+                        Nombre Completo
+                        <input
+                            type="text"
+                            name="nombre"
+                            autocomplete="name"
+                            required
+                            class="rounded-xl border border-primary/30 bg-surface/95 px-3 py-2 text-[0.88rem] text-on-surface outline-none transition focus:border-primary/50 focus:ring-2 focus:ring-primary/25"
+                        />
+                    </label>
+
+                    <label class="grid gap-1 text-[0.62rem] font-bold uppercase tracking-[0.14em] text-primary">
+                        Tratamiento de Interes
+                        <input
+                            type="text"
+                            name="tratamiento"
+                            required
+                            class="rounded-xl border border-primary/30 bg-surface/95 px-3 py-2 text-[0.88rem] text-on-surface outline-none transition focus:border-primary/50 focus:ring-2 focus:ring-primary/25"
+                        />
+                    </label>
+
+                    <label class="grid gap-1 text-[0.62rem] font-bold uppercase tracking-[0.14em] text-primary">
+                        Fecha de Cita
+                        <input
+                            type="date"
+                            name="fecha"
+                            id="fecha-cita"
+                            required
+                            class="rounded-xl border border-primary/30 bg-surface/95 px-3 py-2 text-[0.88rem] text-on-surface outline-none transition focus:border-primary/50 focus:ring-2 focus:ring-primary/25"
+                        />
+                    </label>
+
+                    <label class="grid gap-1 text-[0.62rem] font-bold uppercase tracking-[0.14em] text-primary">
+                        Hora de Cita
+                        <input
+                            type="time"
+                            name="hora"
+                            id="hora-cita"
+                            required
+                            class="rounded-xl border border-primary/30 bg-surface/95 px-3 py-2 text-[0.88rem] text-on-surface outline-none transition focus:border-primary/50 focus:ring-2 focus:ring-primary/25"
+                        />
+                    </label>
+
+                    <p class="m-0 text-[0.78rem] leading-[1.35] text-on-surface/80">Selecciona fecha y hora para consultar disponibilidad por WhatsApp.</p>
+                </div>
+
+                <button
+                    type="submit"
+                    class="mt-1 rounded-full bg-primary px-4 py-3 text-[0.68rem] uppercase tracking-[0.18em] text-on-primary transition duration-220 hover:-translate-y-0.5 active:scale-[0.99] cursor-pointer"
+                >
+                    Consultar Cita por WhatsApp
+                </button>
+            </form>
+        </div>
+
+        <div class="flex h-full flex-col rounded-[20px] border border-primary/15 bg-surface/90 p-[clamp(0.95rem,2.2vw,1.5rem)]" data-contact-panel>
+            <div class="grid gap-4">
+                <div class="grid gap-1.5">
+                    <p class="m-0 text-[0.64rem] font-bold uppercase tracking-[0.16em] text-primary">Encuéntranos</p>
+                    <h3 class="m-0 text-[1.45rem] font-semibold leading-[1.1] text-on-surface">Todo en un solo lugar</h3>
+                </div>
+
+                <div class="grid gap-3 sm:grid-cols-2">
+                    <div class="rounded-2xl border border-primary/15 bg-primary/5 px-3.5 py-3">
+                        <p class="m-0 text-[0.62rem] font-bold uppercase tracking-[0.14em] text-primary">Horario</p>
+                        <p class="mt-2 mb-0 text-[0.92rem] leading-[1.45] text-on-surface/85">Lun - Vie: 9:00 AM - 6:00 PM</p>
+                        <p class="mt-1 mb-0 text-[0.92rem] leading-[1.45] text-on-surface/85">Sáb: 9:00 AM - 6:00 PM</p>
+                    </div>
+
+                    <div class="rounded-2xl border border-primary/15 bg-primary/5 px-3.5 py-3">
+                        <p class="m-0 text-[0.62rem] font-bold uppercase tracking-[0.14em] text-primary">Ubicación</p>
+                        <p class="mt-2 mb-0 text-[0.92rem] leading-[1.45] text-on-surface/85">{locationLabel}</p>
+                        <a
+                            class="mt-2 inline-flex items-center text-[0.68rem] font-bold uppercase tracking-[0.14em] text-primary hover:underline"
+                            href={mapsHref}
+                            target="_blank"
+                            rel="noreferrer"
+                        >
+                            Abrir en Google Maps
+                        </a>
+                    </div>
+                </div>
+
+                <div class="grid gap-2">
+                    <p class="m-0 text-[0.62rem] font-bold uppercase tracking-[0.14em] text-primary">Redes Sociales</p>
+                    <div class="flex flex-wrap gap-2.5">
+                        <a
+                            href={whatsappHref}
+                            target="_blank"
+                            rel="noreferrer"
+                            class="inline-flex items-center rounded-full border border-primary/20 bg-primary/8 px-3.5 py-2 text-[0.66rem] font-bold uppercase tracking-[0.14em] text-on-surface transition duration-220 hover:-translate-y-0.5 hover:border-primary/35"
+                        >
+                            WhatsApp
+                        </a>
+                        <a
+                            href={instagramHref}
+                            target="_blank"
+                            rel="noreferrer"
+                            class="inline-flex items-center rounded-full border border-primary/20 bg-primary/8 px-3.5 py-2 text-[0.66rem] font-bold uppercase tracking-[0.14em] text-on-surface transition duration-220 hover:-translate-y-0.5 hover:border-primary/35"
+                        >
+                            Instagram
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="mt-4 min-h-48 overflow-hidden rounded-2xl border border-primary/15 bg-primary/5" data-contact-map>
+                <iframe
+                    title="Ubicacion de Spabella Stetic"
+                    src="https://www.google.com/maps?q=7.7669316,-72.2171544&z=17&output=embed"
+                    loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade"
+                    class="block min-h-48 w-full border-0"
+                ></iframe>
+            </div>
+        </div>
+    </div>
+</section>
+
+<script>
+  const form = document.getElementById('contact-whatsapp-form') as HTMLFormElement | null;
+  const dateInput = document.getElementById('fecha-cita') as HTMLInputElement | null;
+    const whatsappNumber = '584247394782';
+    const getTodayISO = (): string => {
+    const now = new Date();
+    const year = now.getFullYear();
+    const month = String(now.getMonth() + 1).padStart(2, '0');
+    const day = String(now.getDate()).padStart(2, '0');
+    return `${year}-${month}-${day}`;
+  };
+
+    const readField = (formData: FormData, key: string): string => String(formData.get(key) ?? '').trim();
+
+    const formatDateToDMA = (isoDate: string): string => {
+        const [year, month, day] = isoDate.split('-');
+        if (!year || !month || !day) return isoDate;
+        return `${day}/${month}/${year}`;
+    };
+
+    const openWhatsapp = (message: string): void => {
+        const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`;
+        window.open(whatsappUrl, '_blank', 'noopener,noreferrer');
+    };
+
+  if (dateInput instanceof HTMLInputElement) {
+    dateInput.min = getTodayISO();
+  }
+
+  if (form instanceof HTMLFormElement) {
+        form.addEventListener('submit', (event) => {
+      event.preventDefault();
+
+      const formData = new FormData(form);
+            const nombre = readField(formData, 'nombre');
+            const tratamiento = readField(formData, 'tratamiento');
+            const fecha = readField(formData, 'fecha');
+            const hora = readField(formData, 'hora');
+
+      if (!nombre || !tratamiento || !fecha || !hora) {
+                alert('Completa todos los campos para continuar.');
+        return;
+      }
+
+      const todayISO = getTodayISO();
+      if (fecha < todayISO) {
+                alert('La fecha no puede ser anterior al dia actual.');
+        return;
+      }
+
+            const fechaFormateada = formatDateToDMA(fecha);
+            const message = `Hola!, mi nombre es ${nombre}, me gustaría agendar para el día ${fechaFormateada} a las ${hora}, el tratamiento ${tratamiento}. Gracias!`;
+
+            openWhatsapp(message);
+            alert('Te estamos redirigiendo a WhatsApp para enviar tu solicitud.');
+    });
+  }
+</script>

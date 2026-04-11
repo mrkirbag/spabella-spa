@@ -1,0 +1,26 @@
+---
+import Layout from '@/layouts/Layout.astro';
+import Navbar from '@/components/Navbar.astro';
+import Hero from '@/components/Hero.astro';
+import Services from '@/components/Services.astro';
+import Contact from '@/components/Contact.astro';
+---
+
+<Layout title="SPABELLA STETIC">
+	<Navbar />
+	<main>
+		<Hero />
+		<Services />
+		<Contact />
+	</main>
+
+	<footer class="py-12 md:py-16 text-center border-t border-primary/10 bg-surface/70 backdrop-blur-sm">
+		<p class="text-[10px] uppercase tracking-ultra">© {new Date().getFullYear()} Spabella Stetic.</p>
+	</footer>
+</Layout>
+
+<script>
+	import { initPageAnimations } from '@/animations';
+
+	window.addEventListener('load', initPageAnimations, { once: true });
+</script>
