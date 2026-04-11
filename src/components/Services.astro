@@ -1,84 +1,79 @@
 ---
+import { Image } from 'astro:assets';
 import servicesDepilacion from "@/assets/img/services-depilacion.webp";
 import ServiceCard from "@/components/ServiceCard.astro";
 import tratamientos from "@/data/tratamientos";
 
 const whatsappNumber = '584247394782';
-const whatsappMessage = 'Hola, bienvenido a Spabella Stetic. Será un placer asesorarte y ayudarte a reservar tu experiencia. ¿Podrían brindarme información, por favor?';
+const whatsappMessage = 'Hola, bienvenido a Spabella Stetic. ¿Podrían brindarme información sobre sus tratamientos, por favor?';
 const whatsappHref = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(whatsappMessage)}`;
 ---
 
-<section
-    class="px-4 py-[clamp(3.2rem,7vw,5.8rem)] md:px-8 lg:px-10"
-    id="servicios"
-    data-animate-section="services"
->
+<section class="px-4 py-[clamp(3.2rem,7vw,5.8rem)] md:px-8 lg:px-10" id="servicios">
     <div class="mx-auto grid w-full max-w-330 gap-5">
-        <section class="grid gap-4 lg:grid-cols-2 lg:items-stretch">
-            <div class="flex h-full flex-col rounded-3xl border border-outline/75 bg-surface/80 p-[clamp(1.1rem,2.2vw,1.9rem)] backdrop-blur-md lg:justify-between" data-reveal data-reveal-float>
-                <div class="flex flex-col">
-                    <p class="font-detail m-0 inline-flex w-fit self-start items-center rounded-full border border-primary/35 bg-primary-container/80 px-2.5 py-1 text-[0.58rem] font-extrabold uppercase tracking-[0.2em] text-primary">
-                        Servicio Estrella
-                    </p>
-                    <h3 class="font-headline mt-2 text-[clamp(1.3rem,2.5vw,2rem)] leading-[1.1] text-on-surface">
-                        Depilación Láser
-                    </h3>
-                    <p class="mt-3 text-[0.9rem] leading-6 text-on-surface-variant">
-                        En Spabella Stetic diseñamos un plan exclusivo para tu piel, cuidando cada detalle para que disfrutes de una experiencia indolora, segura y con resultados reales.
-                    </p>
+        
+<section class="grid gap-4 lg:grid-cols-2 lg:items-stretch">
+            <div class="flex h-full flex-col rounded-3xl border border-outline/75 bg-surface/80 p-[clamp(1.1rem,2.2vw,1.9rem)] backdrop-blur-md lg:justify-center" data-reveal data-reveal-float>
+                <p class="font-detail m-0 inline-flex w-fit self-start items-center rounded-full border border-primary/35 bg-primary-container/80 px-2.5 py-1 text-[0.58rem] font-extrabold uppercase tracking-[0.2em] text-primary">
+                    Servicio Estrella
+                </p>
+                <h3 class="font-headline mt-2 text-[clamp(1.3rem,2.5vw,2rem)] leading-[1.1] text-on-surface">Depilación Láser</h3>
+                <p class="mt-3 text-[0.9rem] leading-6 text-on-surface-variant">
+                    En Spabella Stetic diseñamos un plan exclusivo para tu piel, cuidando cada detalle para que disfrutes de una experiencia indolora, segura y con resultados reales.
+                </p>
 
-                    <ul class="mt-4 grid gap-3">
-                        <li class="flex items-start gap-2.5 text-[0.84rem] leading-5.5 text-on-surface-variant">
-                            <span class="service-star-bullet mt-1 inline-flex h-4 w-4 shrink-0 items-center justify-center rounded-full border border-primary/70 bg-primary-container text-[0.6rem] text-primary">✦</span>
-                            <span>Valoración personalizada: analizamos tu piel para garantizar la máxima eficacia.</span>
-                        </li>
-                        <li class="flex items-start gap-2.5 text-[0.84rem] leading-5.5 text-on-surface-variant">
-                            <span class="service-star-bullet mt-1 inline-flex h-4 w-4 shrink-0 items-center justify-center rounded-full border border-primary/70 bg-primary-container text-[0.6rem] text-primary">✦</span>
-                            <span>Tecnología sin dolor: priorizamos tu comodidad con sistemas de enfriamiento avanzado.</span>
-                        </li>
-                        <li class="flex items-start gap-2.5 text-[0.84rem] leading-5.5 text-on-surface-variant">
-                            <span class="service-star-bullet mt-1 inline-flex h-4 w-4 shrink-0 items-center justify-center rounded-full border border-primary/70 bg-primary-container text-[0.6rem] text-primary">✦</span>
-                            <span>Resultados duraderos: un cambio progresivo que notarás y sentirás cada día.</span>
-                        </li>
-                    </ul>
+                <ul class="mt-4 grid gap-3">
+                    <li class="flex items-start gap-2.5 text-[0.84rem] leading-5.5 text-on-surface-variant">
+                        <span class="service-star-bullet mt-1 inline-flex h-4 w-4 shrink-0 items-center justify-center rounded-full border border-primary/70 bg-primary-container text-[0.6rem] text-primary">✦</span>
+                        <span>Valoración personalizada: analizamos tu piel para garantizar la máxima eficacia.</span>
+                    </li>
+                    <li class="flex items-start gap-2.5 text-[0.84rem] leading-5.5 text-on-surface-variant">
+                        <span class="service-star-bullet mt-1 inline-flex h-4 w-4 shrink-0 items-center justify-center rounded-full border border-primary/70 bg-primary-container text-[0.6rem] text-primary">✦</span>
+                        <span>Tecnología sin dolor: priorizamos tu comodidad con sistemas de enfriamiento avanzado.</span>
+                    </li>
+                    <li class="flex items-start gap-2.5 text-[0.84rem] leading-5.5 text-on-surface-variant">
+                        <span class="service-star-bullet mt-1 inline-flex h-4 w-4 shrink-0 items-center justify-center rounded-full border border-primary/70 bg-primary-container text-[0.6rem] text-primary">✦</span>
+                        <span>Resultados duraderos: un cambio progresivo que notarás y sentirás cada día.</span>
+                    </li>
+                </ul>
 
-                    <a
-                        href={whatsappHref}
-                        target="_blank"
-                        rel="noreferrer"
-                        class="touch-manipulation mx-auto mt-6 inline-flex rounded-full bg-primary px-7 py-3 text-[10px] uppercase tracking-widest text-on-primary transition-transform duration-300 ease-[cubic-bezier(0.2,0.8,0.2,1)] will-change-transform hover:-translate-y-1 active:-translate-y-1 active:scale-[0.99] lg:px-10"
-                    >
-                        Reserva ahora
-                    </a>
-                </div>
+                <a
+                    href={whatsappHref}
+                    target="_blank"
+                    rel="noreferrer"
+                    class="touch-manipulation mt-6 inline-flex w-fit rounded-full bg-primary px-7 py-3 text-[10px] uppercase tracking-widest text-on-primary transition-transform duration-300 ease-[cubic-bezier(0.2,0.8,0.2,1)] will-change-transform hover:-translate-y-1 active:-translate-y-1 active:scale-[0.99] lg:px-10"
+                >
+                    Reserva ahora
+                </a>
             </div>
 
-            <figure
-                class="group relative m-0 h-full min-h-[clamp(220px,34vw,390px)] w-full self-stretch overflow-hidden rounded-3xl border border-outline/75 bg-surface/80 backdrop-blur-md lg:min-h-0"
-                data-reveal
-                data-reveal-float
-            >
-                <img
-                    src={servicesDepilacion.src}
+            <figure class="relative w-full overflow-hidden rounded-3xl border border-outline/75 bg-surface-variant/50 aspect-4/3 lg:aspect-auto lg:h-full" data-reveal data-reveal-float data-gallery-item>
+                <Image
+                    src={servicesDepilacion}
                     alt="Depilación láser profesional"
-                    class="absolute inset-0 h-full w-full scale-[1.2] object-cover object-center transition duration-400 ease-out group-hover:scale-[1.16] group-active:scale-[1.14]"
+                    width={960}
+                    height={720}
+                    sizes="(max-width: 1024px) 100vw, 50vw"
+                    quality={75}
+                    loading="eager"
+                    fetchpriority="high"
+                    decoding="async"
+                    class="absolute inset-0 h-full w-full object-cover transition duration-500 hover:scale-105"
                 />
-                <figcaption
-                    class="font-detail absolute bottom-3 left-3 z-10 m-0 rounded-full border border-primary/70 bg-primary-container px-3 py-2 text-[0.62rem] font-extrabold uppercase tracking-[0.13em] text-on-surface"
-                >
+                <figcaption class="font-detail absolute bottom-3 left-3 rounded-full bg-primary-container px-3 py-2 text-[0.62rem] uppercase text-on-surface z-10">
                     Depilación láser premium
                 </figcaption>
             </figure>
         </section>
 
         <section class="mt-5 grid grid-cols-1 gap-3 sm:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-5">
-            {tratamientos.map((tratamiento) => (
-                <ServiceCard
-                    category={tratamiento.category}
-                    title={tratamiento.title}
-                    description={tratamiento.description}
-                    image={tratamiento.image}
-                    alt={tratamiento.alt}
+            {tratamientos.map((t) => (
+                <ServiceCard 
+                    category={t.category} 
+                    title={t.title} 
+                    description={t.description} 
+                    image={t.image} 
+                    alt={t.alt} 
                 />
             ))}
         </section>

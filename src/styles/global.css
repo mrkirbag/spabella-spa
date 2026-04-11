@@ -93,7 +93,13 @@
     background-image: radial-gradient(circle at 10% 15%, rgba(212, 175, 55, 0.1), transparent 45%), linear-gradient(180deg, #ffffff 0%, #f9f5eb 100%);
     background-size: cover;
     background-position: center;
-    background-attachment: fixed;
+    background-attachment: scroll;
+}
+
+@media (min-width: 768px) {
+    .marble-bg {
+        background-attachment: fixed;
+    }
 }
 
 @utility golden-line {
