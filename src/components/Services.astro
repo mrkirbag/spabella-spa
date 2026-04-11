@@ -1,5 +1,4 @@
 ---
-import { Image } from 'astro:assets';
 import servicesDepilacion from "@/assets/img/services-depilacion.webp";
 import ServiceCard from "@/components/ServiceCard.astro";
 import tratamientos from "@/data/tratamientos";
@@ -13,7 +12,7 @@ const whatsappHref = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(
     <div class="mx-auto grid w-full max-w-330 gap-5">
         
 <section class="grid gap-4 lg:grid-cols-2 lg:items-stretch">
-            <div class="flex h-full flex-col rounded-3xl border border-outline/75 bg-surface/80 p-[clamp(1.1rem,2.2vw,1.9rem)] backdrop-blur-md lg:justify-center" data-reveal data-reveal-float>
+            <div class="flex h-full flex-col rounded-3xl border border-outline/75 bg-surface/80 p-[clamp(1.1rem,2.2vw,1.9rem)] backdrop-blur-md lg:justify-center" data-reveal>
                 <p class="font-detail m-0 inline-flex w-fit self-start items-center rounded-full border border-primary/35 bg-primary-container/80 px-2.5 py-1 text-[0.58rem] font-extrabold uppercase tracking-[0.2em] text-primary">
                     Servicio Estrella
                 </p>
@@ -47,17 +46,16 @@ const whatsappHref = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(
                 </a>
             </div>
 
-            <figure class="relative w-full overflow-hidden rounded-3xl border border-outline/75 bg-surface-variant/50 aspect-4/3 lg:aspect-auto lg:h-full" data-reveal data-reveal-float data-gallery-item>
-                <Image
-                    src={servicesDepilacion}
-                    alt="Depilación láser profesional"
-                    widths={[480, 800, 960]}
-                    sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 960px"
-                    quality={80} 
-                    format="webp" 
+            <figure class="group relative w-full min-h-[clamp(240px,34vw,390px)] overflow-hidden rounded-3xl border border-outline/75 bg-surface-variant/50 aspect-4/3 lg:aspect-auto lg:h-full">
+                <img 
+                    src={servicesDepilacion.src} 
+                    alt="Depilación láser en Spabella Stetic" 
+                    width={540} 
+                    height={405} 
                     loading="eager"
                     fetchpriority="high"
-                    class="absolute inset-0 h-full w-full object-cover transition duration-500 hover:scale-105"
+                    decoding="sync"
+                    class="absolute inset-0 block min-h-full min-w-full object-cover object-center transition duration-300 will-change-transform group-hover:scale-105"
                 />
                 <figcaption class="font-detail absolute bottom-3 left-3 rounded-full bg-primary-container px-3 py-2 text-[0.62rem] uppercase text-on-surface z-10">
                     Depilación láser premium
