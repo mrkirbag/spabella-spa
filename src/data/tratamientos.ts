@@ -1,11 +1,9 @@
 import type { ImageMetadata } from 'astro';
-import depilacion from '@/assets/img/depilacion.webp';
 import amazonica from '@/assets/tratamientos/amazonica.webp';
 import banhoderio from '@/assets/tratamientos/banhoderio.webp';
 import cicatrices from '@/assets/tratamientos/cicatrices.webp';
 import dermapen from '@/assets/tratamientos/dermapen.webp';
 import despigmentacion from '@/assets/tratamientos/despigmentacion.webp';
-import hifu from '@/assets/tratamientos/hifu.webp';
 import limpiezafacial from '@/assets/tratamientos/limpiezafacial.webp';
 import manicura from '@/assets/tratamientos/manicura.webp';
 import masajereductor from '@/assets/tratamientos/masajereductor.webp';
@@ -19,6 +17,9 @@ import lifting from '@/assets/tratamientos/lifting.webp';
 import morpheus8 from '@/assets/tratamientos/morpheus8.webp';
 import headspacoreano from '@/assets/tratamientos/headspacoreano.webp';
 import hollywoodpeel from '@/assets/tratamientos/hollywoodpeel.webp';
+import aguastar from '@/assets/tratamientos/aguastar.webp';
+import laserhongos from '@/assets/tratamientos/laserhongos.webp';
+import pdrn from '@/assets/tratamientos/pdrn.webp';
 export interface Tratamiento {
     category: string;
     title: string;
@@ -153,6 +154,27 @@ const tratamientos: Tratamiento[] = [
         description: 'Tratamiento para atenuar manchas y unificar visiblemente el tono de piel.',
         image: despigmentacion,
         alt: 'Despigmentación en Spabella Stetic',
+    },
+    {
+        category: 'Hidratación',
+        title: 'Agua Star',
+        description: 'Hidratación profunda y revitalización para una piel fresca, suave y luminosa.',
+        image: aguastar,
+        alt: 'Agua Star en Spabella Stetic',
+    },
+    {
+        category: 'Regeneración',
+        title: 'PDRN',
+        description: 'Tratamiento regenerativo para mejorar la textura y apariencia de la piel.',
+        image: pdrn,
+        alt: 'PDRN en Spabella Stetic',
+    },
+    {
+        category: 'Láser',
+        title: 'Láser Onicomicosis',
+        description: 'Tratamiento láser para combatir infecciones fúngicas en las uñas.',
+        image: laserhongos,
+        alt: 'Láser Onicomicosis en Spabella Stetic',
     }
 ];
 
