@@ -1,14 +1,24 @@
 import type { ImageMetadata } from 'astro';
-import lashista from '@/assets/img/lashista.webp';
-import manicura from '@/assets/img/manicura.webp';
-import masajes from '@/assets/img/masajes.webp';
-import morpheus from '@/assets/img/morpheus.webp';
-import pdrn from '@/assets/img/pdrn.webp';
-import pedicura from '@/assets/img/pedicura.webp';
-import peeling from '@/assets/img/peeling.webp';
-import peluqueria from '@/assets/img/peluqueria.webp';
 import depilacion from '@/assets/img/depilacion.webp';
-
+import amazonica from '@/assets/tratamientos/amazonica.webp';
+import banhoderio from '@/assets/tratamientos/banhoderio.webp';
+import cicatrices from '@/assets/tratamientos/cicatrices.webp';
+import dermapen from '@/assets/tratamientos/dermapen.webp';
+import despigmentacion from '@/assets/tratamientos/despigmentacion.webp';
+import hifu from '@/assets/tratamientos/hifu.webp';
+import limpiezafacial from '@/assets/tratamientos/limpiezafacial.webp';
+import manicura from '@/assets/tratamientos/manicura.webp';
+import masajereductor from '@/assets/tratamientos/masajereductor.webp';
+import masajesrelajantes from '@/assets/tratamientos/masajesrelajantes.webp';
+import micropigmentacion from '@/assets/tratamientos/micropigmentacion.webp';
+import pedicura from '@/assets/tratamientos/pedicura.webp';
+import peluqueria from '@/assets/tratamientos/peluqueria.webp';
+import pestanaspap from '@/assets/tratamientos/pestañaspap.webp';
+import porcenalizacionfacial from '@/assets/tratamientos/porcenalizacionfacial.webp';
+import lifting from '@/assets/tratamientos/lifting.webp';
+import morpheus8 from '@/assets/tratamientos/morpheus8.webp';
+import headspacoreano from '@/assets/tratamientos/headspacoreano.webp';
+import hollywoodpeel from '@/assets/tratamientos/hollywoodpeel.webp';
 export interface Tratamiento {
     category: string;
     title: string;
@@ -20,17 +30,10 @@ export interface Tratamiento {
 const tratamientos: Tratamiento[] = [
     {
         category: 'Estilo',
-        title: 'Peluqueria',
+        title: 'Peluquería',
         description: 'Corte, color y estilismo con acabados perfectos.',
         image: peluqueria,
-        alt: 'Peluqueria en Spabella Stetic',
-    },
-    {
-        category: 'Mirada',
-        title: 'Lashista',
-        description: 'Diseño de pestañas según forma ocular y estilo personal.',
-        image: lashista,
-        alt: 'Lashista en Spabella Stetic',
+        alt: 'Peluquería en Spabella Stetic',
     },
     {
         category: 'Uñas',
@@ -40,46 +43,116 @@ const tratamientos: Tratamiento[] = [
         alt: 'Manicura en Spabella Stetic',
     },
     {
-        category: 'Pies',
+        category: 'Uñas',
         title: 'Pedicura',
         description: 'Confort, higiene profunda y acabado elegante.',
         image: pedicura,
         alt: 'Pedicura en Spabella Stetic',
     },
     {
-        category: 'Bienestar',
-        title: 'Masajes',
-        description: 'Protocolos descontracturantes, drenantes y de bienestar.',
-        image: masajes,
-        alt: 'Masajes en Spabella Stetic',
+        category: 'Tecnología estética',
+        title: 'Morpheus 8',
+        description: 'Radiofrecuencia fraccionada para remodelación profunda y mejora de textura en rostro y cuerpo.',
+        image: morpheus8,
+        alt: 'Morpheus 8 en Spabella Stetic',
+    },
+    {
+        category: 'Facial',
+        title: 'Limpieza facial Agua Star',
+        description: 'Higiene profunda y renovación suave para una piel fresca y luminosa.',
+        image: limpiezafacial,
+        alt: 'Limpieza facial Agua Star en Spabella Stetic',
+    },
+    {
+        category: 'Facial',
+        title: 'Dermapen',
+        description: 'Microestimulación para mejorar textura, poros y apariencia general del rostro.',
+        image: dermapen,
+        alt: 'Dermapen en Spabella Stetic',
+    },
+    {
+        category: 'Facial',
+        title: 'Porcelanización facial',
+        description: 'Protocolo para un acabado uniforme, suave y radiante en la piel del rostro.',
+        image: porcenalizacionfacial,
+        alt: 'Porcelanización facial en Spabella Stetic',
+    },
+    {
+        category: 'Capilar',
+        title: 'Head Spa coreano',
+        description: 'Ritual de relajación y limpieza del cuero cabelludo con enfoque integral.',
+        image: headspacoreano,
+        alt: 'Head Spa coreano en Spabella Stetic',
+    },
+    {
+        category: 'Mirada',
+        title: 'Micropigmentación de cejas y laminación',
+        description: 'Técnica de pigmentación para definir, corregir o embellecer la forma de las cejas.',
+        image: micropigmentacion,
+        alt: 'Micropigmentación de cejas y laminación en Spabella Stetic',
+    },
+    {
+        category: 'Mirada',
+        title: 'Pestañas punto por punto',
+        description: 'Aplicación personalizada para realzar la mirada con un acabado delicado.',
+        image: pestanaspap,
+        alt: 'Pestañas punto por punto en Spabella Stetic',
+    },
+    {
+        category: 'Mirada',
+        title: 'Lifting de pestañas',
+        description: 'Curvatura natural para una mirada más abierta sin extensiones.',
+        image: lifting,
+        alt: 'Lifting de pestañas en Spabella Stetic',
+    },
+    {
+        category: 'Capilar',
+        title: 'Hidratación capilar baño de río',
+        description: 'Aporte intenso de hidratación para recuperar brillo, suavidad y movimiento.',
+        image: banhoderio,
+        alt: 'Hidratación capilar baño de río en Spabella Stetic',
+    },
+    {
+        category: 'Capilar',
+        title: 'Alisado cacao amazónica',
+        description: 'Control de frizz y alisado progresivo con acabado sedoso y manejable.',
+        image: amazonica,
+        alt: 'Alisado cacao amazónica en Spabella Stetic',
+    },
+    {
+        category: 'Regeneración',
+        title: 'Tratamientos para cicatrices, estrías y queloides',
+        description: 'Protocolos orientados a mejorar textura y apariencia de marcas en la piel.',
+        image: cicatrices,
+        alt: 'Tratamientos para cicatrices, estrías y queloides en Spabella Stetic',
+    },
+    {
+        category: 'Masajes',
+        title: 'Masajes reductores con cavitación',
+        description: 'Técnicas enfocadas en modelar contorno y apoyar objetivos corporales.',
+        image: masajereductor,
+        alt: 'Masajes reductores con cavitación en Spabella Stetic',
+    },
+    {
+        category: 'Masajes',
+        title: 'Masajes relajantes',
+        description: 'Experiencia de bienestar para disminuir tensión y recuperar equilibrio.',
+        image: masajesrelajantes,
+        alt: 'Masajes relajantes en Spabella Stetic',
+    },
+    {
+        category: 'Láser',
+        title: 'Láser Hollywood Peel',
+        description: 'Peeling de efecto luminoso para mejorar tono y aspecto general del rostro.',
+        image: hollywoodpeel,
+        alt: 'Láser Hollywood Peel en Spabella Stetic',
     },
     {
         category: 'Piel',
-        title: 'Peeling',
-        description: 'Renovación progresiva para textura, tono y luminosidad.',
-        image: peeling,
-        alt: 'Peeling en Spabella Stetic',
-    },
-    {
-        category: 'Tecnología',
-        title: 'Morpheus8',
-        description: 'Radiofrecuencia fraccionada para redefinición subdérmica.',
-        image: morpheus,
-        alt: 'Morpheus8 en Spabella Stetic',
-    },
-    {
-        category: 'Bioestimulación',
-        title: 'PDRN',
-        description: 'Bioestimulación para regeneración y calidad de piel.',
-        image: pdrn,
-        alt: 'PDRN en Spabella Stetic',
-    },
-    {
-        category: 'Belleza Tecnológica',
-        title: 'Depilación Láser',
-        description: 'Tecnología avanzada para eliminación efectiva y duradera del vello.',
-        image: depilacion,
-        alt: 'Depilación Láser en Spabella Stetic',
+        title: 'Despigmentación',
+        description: 'Tratamiento para atenuar manchas y unificar visiblemente el tono de piel.',
+        image: despigmentacion,
+        alt: 'Despigmentación en Spabella Stetic',
     }
 ];
 

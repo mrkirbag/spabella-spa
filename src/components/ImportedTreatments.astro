@@ -1,0 +1,106 @@
+---
+import amazonica from "@/assets/tratamientos/amazonica.webp";
+import banhoderio from "@/assets/tratamientos/banhoderio.webp";
+import amberglow from "@/assets/importados/amberglow.webp";
+import melena from "@/assets/importados/menela.webp";
+import orchidglow from "@/assets/importados/orchidglow.jpg";
+import pinkglow from "@/assets/importados/pinkglow.webp";
+---
+
+<section class="mt-10 flex max-h-svh flex-col overflow-y-auto rounded-3xl border border-outline/70 bg-linear-to-b from-primary-container/70 via-surface to-primary-container/40 p-3 sm:p-4 lg:p-5" data-reveal>
+    <div class="mx-auto max-w-3xl text-center">
+        <p class="font-detail text-[0.62rem] uppercase tracking-[0.2em] text-primary">Selección Exclusiva</p>
+        <h3 class="font-headline mt-2 text-[clamp(1.3rem,2.4vw,2rem)] leading-[1.05] text-on-surface">
+            Tratamientos importados
+        </h3>
+        <p class="mt-2 text-[0.84rem] leading-5 text-on-surface-variant">
+            Fórmulas especiales para resultados premium: nutrición intensa, brillo visible y acabado profesional.
+        </p>
+    </div>
+
+    <div class="mt-4 grid grid-cols-1 gap-2.5 sm:grid-cols-2 md:h-[58vh] md:min-h-0 md:flex-1 md:grid-cols-4 md:grid-rows-3 md:auto-rows-fr">
+        <figure class="group relative overflow-hidden rounded-2xl border border-outline/65 bg-surface-variant/40 md:col-span-2 md:row-span-3">
+            <img
+                src={amazonica.src}
+                alt="Producto importado Amazonica Cacao"
+                loading="lazy"
+                decoding="async"
+                class="h-full w-full object-cover transition duration-500 will-change-transform group-hover:scale-[1.08]"
+            />
+            <div class="pointer-events-none absolute inset-0 bg-linear-to-t from-black/55 via-black/15 to-transparent"></div>
+            <figcaption class="font-detail absolute bottom-3 left-3 rounded-full border border-primary/50 bg-black/35 px-3 py-1 text-[0.65rem] uppercase tracking-[0.14em] text-primary-container backdrop-blur-[1px]">
+                Amazonica Cacao
+            </figcaption>
+        </figure>
+
+        <figure class="group relative overflow-hidden rounded-2xl border border-outline/65 bg-surface-variant/40 md:col-start-3 md:row-start-1 md:row-span-2">
+            <img
+                src={banhoderio.src}
+                alt="Producto importado Banho de Rio"
+                loading="lazy"
+                decoding="async"
+                class="h-full w-full object-cover transition duration-500 will-change-transform group-hover:scale-[1.08]"
+            />
+            <div class="pointer-events-none absolute inset-0 bg-linear-to-t from-black/55 via-black/15 to-transparent"></div>
+            <figcaption class="font-detail absolute bottom-3 left-3 rounded-full border border-primary/50 bg-black/35 px-3 py-1 text-[0.65rem] uppercase tracking-[0.14em] text-primary-container backdrop-blur-[1px]">
+                Banho de Rio
+            </figcaption>
+        </figure>
+
+        <figure class="group relative overflow-hidden rounded-2xl border border-outline/65 bg-surface-variant/40 md:col-start-3 md:row-start-3">
+            <img
+                src={melena.src}
+                alt="Producto importado Melena"
+                loading="lazy"
+                decoding="async"
+                class="h-full w-full object-cover transition duration-500 will-change-transform group-hover:scale-[1.08]"
+            />
+            <div class="pointer-events-none absolute inset-0 bg-linear-to-t from-black/55 via-black/15 to-transparent"></div>
+            <figcaption class="font-detail absolute bottom-3 left-3 rounded-full border border-primary/50 bg-black/35 px-3 py-1 text-[0.65rem] uppercase tracking-[0.14em] text-primary-container backdrop-blur-[1px]">
+                Menela
+            </figcaption>
+        </figure>
+
+        <figure class="group relative overflow-hidden rounded-2xl border border-outline/65 bg-surface-variant/40 md:col-start-4 md:row-start-1">
+            <img
+                src={pinkglow.src}
+                alt="Producto importado Pink Glow"
+                loading="lazy"
+                decoding="async"
+                class="h-full w-full object-cover transition duration-500 will-change-transform group-hover:scale-[1.08]"
+            />
+            <div class="pointer-events-none absolute inset-0 bg-linear-to-t from-black/55 via-black/15 to-transparent"></div>
+            <figcaption class="font-detail absolute bottom-3 left-3 rounded-full border border-primary/50 bg-black/35 px-3 py-1 text-[0.65rem] uppercase tracking-[0.14em] text-primary-container backdrop-blur-[1px]">
+                Pink Glow
+            </figcaption>
+        </figure>
+
+        <figure class="group relative overflow-hidden rounded-2xl border border-outline/65 bg-surface-variant/40 md:col-start-4 md:row-start-2">
+            <img
+                src={amberglow.src}
+                alt="Producto importado Amber Glow"
+                loading="lazy"
+                decoding="async"
+                class="h-full w-full object-cover transition duration-500 will-change-transform group-hover:scale-[1.08]"
+            />
+            <div class="pointer-events-none absolute inset-0 bg-linear-to-t from-black/55 via-black/15 to-transparent"></div>
+            <figcaption class="font-detail absolute bottom-3 left-3 rounded-full border border-primary/50 bg-black/35 px-3 py-1 text-[0.65rem] uppercase tracking-[0.14em] text-primary-container backdrop-blur-[1px]">
+                Amber Glow
+            </figcaption>
+        </figure>
+
+        <figure class="group relative overflow-hidden rounded-2xl border border-outline/65 bg-surface-variant/40 md:col-start-4 md:row-start-3">
+            <img
+                src={orchidglow.src}
+                alt="Producto importado Orchid Glow"
+                loading="lazy"
+                decoding="async"
+                class="h-full w-full object-cover transition duration-500 will-change-transform group-hover:scale-[1.08]"
+            />
+            <div class="pointer-events-none absolute inset-0 bg-linear-to-t from-black/55 via-black/15 to-transparent"></div>
+            <figcaption class="font-detail absolute bottom-3 left-3 rounded-full border border-primary/50 bg-black/35 px-3 py-1 text-[0.65rem] uppercase tracking-[0.14em] text-primary-container backdrop-blur-[1px]">
+                Orchid Glow
+            </figcaption>
+        </figure>
+    </div>
+</section>
